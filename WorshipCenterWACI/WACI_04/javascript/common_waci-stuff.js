@@ -459,6 +459,9 @@ function waciBox (address, port, deviceType, action)
 			case 'menu-right':
 				command = 'point_right';
 				break;
+			case 'menu-toggle':
+				command = 'menuon';
+				break;
 			case 'menu-up':
 				command = 'point_up';
 				break;
