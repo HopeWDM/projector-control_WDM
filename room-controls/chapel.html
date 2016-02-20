@@ -7,6 +7,18 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">
 		<script type="text/javascript" src="javascript/common_extron-stuff.js"></script>
 		<script type="text/javascript" src="javascript/projector-vars_wdm.js"></script>
+		<script type="text/javascript">
+			function all_on() {
+				setTimeout("extronBox(chapel, mainSide, panasonicPJLink, power_on);", 1000);
+				setTimeout("extronBox(chapel, mainCenter, sanyoPLC, power_on);", 2000);
+				setTimeout("extronBox(chapel, foldbackSide, sanyoPLC, power_on);", 3000);
+			}
+			function all_off() {
+				setTimeout("extronBox(chapel, mainSide, panasonicPJLink, power_off);", 1000);
+				setTimeout("extronBox(chapel, mainCenter, sanyoPLC, power_off);", 2000);
+				setTimeout("extronBox(chapel, foldbackSide, sanyoPLC, power_off);", 3000);
+			}
+		</script>
 		<!--
 			Reminder:
 			extronBox(address, port, deviceType, action);
@@ -26,6 +38,14 @@
 			<tr class="table-buttons">
 				<td colspan="2">
 					<span class="arial-big light-gray">Projector power controls:</span>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="all_on();"><br><br><br>Projectors ON<br><br><br><br></a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="all_off();"><br><br><br>Projectors OFF<br><br><br><br></a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
