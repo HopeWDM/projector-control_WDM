@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"> 
+		<title>Well controls</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">
+		<link rel="stylesheet" type="text/css" href="stylesheet/show-hide_wdm.css">
+		<script type="text/javascript" src="javascript/common_extron-stuff.js"></script>
+		<script type="text/javascript" src="javascript/projector-vars_wdm.js"></script>
+		<script type="text/javascript" src="javascript/show-hide_wdm.js"></script>
+		<!--
+			Reminder:
+			extronBox(address, port, deviceType, action);
+			address = roomName;
+			port = projectorName;
+		// -->
+	</head>
+
+	<body class="bg-black"">
+		<div>
+			<a class="common tiny" onclick="goBack();">Back</a>
+			<br>
+			<br>
+			<img src="graphics/productionlogo_s.png" alt="Production Logo">
+		</div>
+		<br>
+
+		<div id="wellMainCenter_tc">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="wellMainCenter_mc">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, menu_toggle);">Menu Toggle</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="wellmainCenter_ls">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="wellMainCenter_fz">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, focus_in_coarse);">Focus In Coarse</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, focus_out_coarse);">Focus Out Coarse</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, focus_in_fine);">Focus In Fine</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, focus_out_fine);">Focus Out Fine</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, zoom_in_coarse);">Zoom In Coarse</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, zoom_out_coarse);">Zoom Out Coarse</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, zoom_in_fine);">Zoom In Fine</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="extronBox(well, mainCenter, panasonicPJLink, zoom_out_fine);">Zoom Out Fine</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+	</body>
+</html>
