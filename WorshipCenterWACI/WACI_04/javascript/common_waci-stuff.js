@@ -321,6 +321,7 @@ The following devices are supported by deviceType:
 
 The following devices are supported for "port":
 
+atriumCabinets
 bookstoreTV
 centerBeam1
 centerCenter
@@ -482,9 +483,9 @@ function waciBox (address, port, deviceType, action)
 		
 		switch (port)
 		{
-			case 'bookstoreTV-0':
-				projNum = '20';
-				waciNum = '4';
+			case 'atriumCabinets':
+				projNum = '##TBD##';
+				waciNum = '##TBD##';
 				devType = 'plasma';
 				break;
 			case 'bookstoreTV-1':

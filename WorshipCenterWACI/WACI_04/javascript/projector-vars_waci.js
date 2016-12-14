@@ -8,6 +8,7 @@ var wc = 'wc';
 
 // get all our variables ready:
 
+var atriumCabinets;
 var bookstoreTV_0;
 var bookstoreTV_1;
 var bookstoreTV_2;
@@ -50,6 +51,7 @@ function populateVars (address) {
 	switch (address)
 	{
 		case 'wc':
+			atriumCabinets = 'atriumCabinets';
 			bookstoreTV_0 = 'bookstoreTV-0';
 			bookstoreTV_1 = 'bookstoreTV-1';
 			bookstoreTV_2 = 'bookstoreTV-2';
