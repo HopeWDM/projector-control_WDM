@@ -484,8 +484,8 @@ function waciBox (address, port, deviceType, action)
 		switch (port)
 		{
 			case 'atriumCabinets':
-				projNum = '##TBD##';
-				waciNum = '##TBD##';
+				projNum = '10';
+				waciNum = '2';
 				devType = 'plasma';
 				break;
 			case 'bookstoreTV-1':
