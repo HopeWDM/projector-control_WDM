@@ -1,10 +1,9 @@
-function httpGet (theUrl)
-	{
-		var xmlHttp = null;
-    	xmlHttp = new XMLHttpRequest();
-    	xmlHttp.open( "GET", theUrl, true );
-    	xmlHttp.send();
-    }
+function httpGet (theUrl) {
+	var xmlHttp = null;
+	xmlHttp = new XMLHttpRequest();
+	xmlHttp.open( "GET", theUrl, true );
+	xmlHttp.send();
+}
 
 function goBack()
 	{
@@ -550,6 +549,12 @@ function extronBox (address, port, deviceType, action)
 				break;
 			case 'power-on':
 				command = 'ka%20%30%20%31';
+				break;
+			case 'input-HDMI': // technically HDMI 1
+				command = 'xb%200%2090';
+				break;
+			case 'input-VGA':
+				command = 'xb%200%2060';
 				break;
 			case 'stupid-sync':
 				command = '';
