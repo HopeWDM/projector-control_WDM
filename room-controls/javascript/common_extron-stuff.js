@@ -96,6 +96,7 @@ var lens_shift_coarse_down = 'lens-shift-coarse-down';
 var lens_shift_coarse_left = 'lens-shift-coarse-left';
 var lens_shift_coarse_right = 'lens-shift-coarse-right';
 var lens_shift_coarse_up = 'lens-shift-coarse-up';
+var menu_back = 'menu-back';
 var menu_down = 'menu-down';
 var menu_enter = 'menu-enter';
 var menu_left = 'menu-left';
@@ -172,6 +173,7 @@ actions that are supported on at least one device:
 	lens-shift-coarse-left
 	lens-shift-coarse-right
 	lens-shift-coarse-up
+	menu-back
 	menu-down
 	menu-enter
 	menu-left
