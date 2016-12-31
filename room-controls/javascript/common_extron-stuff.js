@@ -550,6 +550,9 @@ function extronBox (address, port, deviceType, action)
 			case 'input-VGA':
 				command = 'xb%200%2060';
 				break;
+			case 'menu-back':
+				command = 'mc%200%2028';
+				break;
 			case 'menu-down':
 				command = 'mc%200%2041';
 				break;
