@@ -88,7 +88,7 @@ var gymMainSide_ls = 'gymMainSide_ls';
 
 function showAtrium(id) {
 	hideStuff(mainTop);
-	hideBridge(id);
+	hideAtrium(id);
 	document.getElementById(id).style.display = 'block';
 }
 
