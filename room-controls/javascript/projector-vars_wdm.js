@@ -3,6 +3,8 @@
 // so that they equal themselves. (This is needed for a
 // switch/case block later on.)
 
+var atriumHL = 'atriumHL';
+var atriumHR = 'atriumHR';
 var bridge = 'bridge';
 var chapel = 'chapel';
 var daLite = 'daLite';
@@ -57,6 +59,14 @@ function populateVars (address) {
 	*/
 	switch (address)
 	{
+		case 'atriumHL':
+			mainCenter = '01';
+			atriumHL = 'http://10.40.30.85/cgi-bin/cgi.pl';
+			break;
+		case 'atriumHR':
+			mainCenter = '01';
+			atriumHR = 'http://10.40.30.86/cgi-bin/cgi.pl;
+			break;
 		case 'bridge':
 			foldbackCenter = '04';
 			mainCenter = '03';
