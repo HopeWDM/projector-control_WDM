@@ -65,7 +65,7 @@ function populateVars (address) {
 			break;
 		case 'atriumHR':
 			mainCenter = '01';
-			atriumHR = 'http://10.40.30.86/cgi-bin/cgi.pl;
+			atriumHR = 'http://10.40.30.86/cgi-bin/cgi.pl';
 			break;
 		case 'bridge':
 			foldbackCenter = '04';
