@@ -544,17 +544,35 @@ function extronBox (address, port, deviceType, action)
 		*/
 		switch (action)
 		{
-			case 'power-off':
-				command = 'ka%20%30%20%30';
-				break;
-			case 'power-on':
-				command = 'ka%20%30%20%31';
-				break;
 			case 'input-HDMI': // technically HDMI 1
 				command = 'xb%200%2090';
 				break;
 			case 'input-VGA':
 				command = 'xb%200%2060';
+				break;
+			case 'menu-down':
+				command = 'mc%200%2041';
+				break;
+			case 'menu-enter':
+				command = 'mc%200%2044';
+				break;
+			case 'menu-left':
+				command = 'mc%200%2007';
+				break;
+			case 'menu-right':
+				command = 'mc%200%2006';
+				break;
+			case 'menu-toggle':
+				command = 'mc%200%2043';
+				break;
+			case 'menu-up':
+				command = 'mc%200%2040';
+				break;
+			case 'power-off':
+				command = 'ka%20%30%20%30';
+				break;
+			case 'power-on':
+				command = 'ka%20%30%20%31';
 				break;
 			case 'stupid-sync':
 				command = '';
