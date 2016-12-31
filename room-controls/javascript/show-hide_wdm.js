@@ -22,6 +22,14 @@ _ls = lens shift
 
 var mainTop = 'mainTop';
 
+// Atrium:
+var atriumHL = 'atriumHL';
+var atriumHR = 'atriumHR';
+var atriumHL_tc = 'atriumHL_tc';
+var atriumHL_mc = 'atriumHL_mc';
+var atriumHR_tc = 'atriumHR_tc';
+var atriumHR_mc = 'atriumHR_mc';
+
 // Bridge:
 var bridgeMainLeft = 'bridgeMainLeft';
 var bridgeMainRight = 'bridgeMainRight';
@@ -78,6 +86,12 @@ var gymMainSide_ls = 'gymMainSide_ls';
 
 
 
+function showAtrium(id) {
+	hideStuff(mainTop);
+	hideBridge(id);
+	document.getElementById(id).style.display = 'block';
+}
+
 function showBridge(id) {
 	hideStuff(mainTop);
 	hideBridge(id);
@@ -102,6 +116,18 @@ function showGym(id) {
 	start of "individual" segments;
 */
 
+
+
+
+// start of "atrium"
+function hideAtrium(id) {
+	hideStuff(atriumHL);
+	hideStuff(atriumHR);
+	hideStuff(atriumHL_tc);
+	hideStuff(atriumHL_mc);
+	hideStuff(atriumHR_tc);
+	hideStuff(atriumHR_mc);
+}
 
 
 // start of "bridge"
