@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html>
 
+	<head>
+		<meta charset="utf-8"> 
+		<title>Atrium controls</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">
+		<link rel="stylesheet" type="text/css" href="stylesheet/show-hide_wdm.css">
+		<script type="text/javascript" src="javascript/common_extron-stuff.js"></script>
+		<script type="text/javascript" src="javascript/projector-vars_wdm.js"></script>
+		<script type="text/javascript" src="javascript/show-hide_wdm.js"></script>
+		<!--
+			Reminder:
+			extronBox(address, port, deviceType, action);
+			address = roomName;
+			port = projectorName;
+		// -->
+	</head>
+
+	<body class="bg-black" onload="showAtrium(mainTop);">
+		<div>
+			<a class="common tiny" onclick="goBack();">Back</a>
+			<br>
+			<br>
+			<img src="graphics/White_HopeProduction.png" alt="Hope Production Logo">
+		</div>
+		<br>
+		<div>
+			<a class="common tiny" onclick="showAtrium(mainTop);">[ main menu ]</a>
+		</div>
+		<br>
+		<div id="mainTop">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Atrium TVs:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showAtrium(atriumHL);">House Left</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showAtrium(atriumHR);">House Right</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="atriumHL">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Atrium House Left:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showAtrium(atriumHL_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showAtrium(atriumHL_mc);">Menu controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="atriumHL_tc">
+			<span>
+				<a class="common tiny" onclick="showAtrium(atriumHL);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Atrium House Left</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, power_off);">Power off</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="atriumHL_mc">
+			<span>
+				<a class="common tiny" onclick="showAtrium(atriumHL);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="3">
+						<span class="arial-large light-gray">Atrium House Left</span>
+						<br>
+						<span class="arial-big light-gray">Menu controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue width-normal" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_back);">Menu BACK</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue width-normal" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_toggle);">Menu Toggle</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="atriumHR_tc">
+			<span>
+				<a class="common tiny" onclick="showAtrium(atriumHR);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Atrium House Right</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="extronBox(atriumHR, mainCenter, lgTV, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="extronBox(atriumHR, mainCenter, lgTV, power_off);">Power off</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="atriumHR_mc">
+			<span>
+				<a class="common tiny" onclick="showAtrium(atriumHR);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="3">
+						<span class="arial-large light-gray">Atrium House Right</span>
+						<br>
+						<span class="arial-big light-gray">Menu controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue width-normal" onclick="extronBox(atriumHR, mainCenter, lgTV, menu_back);">Menu BACK</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue width-normal" onclick="extronBox(atriumHR, mainCenter, lgTV, menu_toggle);">Menu Toggle</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHR, mainCenter, lgTV, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHR, mainCenter, lgTV, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHR, mainCenter, lgTV, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHL, mainCenter, lgTV, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="extronBox(atriumHR, mainCenter, lgTV, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+
+
+	</body>
+</html>
