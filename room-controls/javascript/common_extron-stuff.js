@@ -1,10 +1,9 @@
-function httpGet (theUrl)
-	{
-		var xmlHttp = null;
-    	xmlHttp = new XMLHttpRequest();
-    	xmlHttp.open( "GET", theUrl, true );
-    	xmlHttp.send();
-    }
+function httpGet (theUrl) {
+	var xmlHttp = null;
+	xmlHttp = new XMLHttpRequest();
+	xmlHttp.open( "GET", theUrl, true );
+	xmlHttp.send();
+}
 
 function goBack()
 	{
@@ -97,6 +96,7 @@ var lens_shift_coarse_down = 'lens-shift-coarse-down';
 var lens_shift_coarse_left = 'lens-shift-coarse-left';
 var lens_shift_coarse_right = 'lens-shift-coarse-right';
 var lens_shift_coarse_up = 'lens-shift-coarse-up';
+var menu_back = 'menu-back';
 var menu_down = 'menu-down';
 var menu_enter = 'menu-enter';
 var menu_left = 'menu-left';
@@ -173,6 +173,7 @@ actions that are supported on at least one device:
 	lens-shift-coarse-left
 	lens-shift-coarse-right
 	lens-shift-coarse-up
+	menu-back
 	menu-down
 	menu-enter
 	menu-left
@@ -545,6 +546,33 @@ function extronBox (address, port, deviceType, action)
 		*/
 		switch (action)
 		{
+			case 'input-HDMI': // technically HDMI 1
+				command = 'xb%200%2090';
+				break;
+			case 'input-VGA':
+				command = 'xb%200%2060';
+				break;
+			case 'menu-back':
+				command = 'mc%200%2028';
+				break;
+			case 'menu-down':
+				command = 'mc%200%2041';
+				break;
+			case 'menu-enter':
+				command = 'mc%200%2044';
+				break;
+			case 'menu-left':
+				command = 'mc%200%2007';
+				break;
+			case 'menu-right':
+				command = 'mc%200%2006';
+				break;
+			case 'menu-toggle':
+				command = 'mc%200%2043';
+				break;
+			case 'menu-up':
+				command = 'mc%200%2040';
+				break;
 			case 'power-off':
 				command = 'ka%20%30%20%30';
 				break;

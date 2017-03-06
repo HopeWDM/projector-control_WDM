@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -14,13 +15,27 @@
 			port = projectorName;
 		// -->
 		<script type="text/javascript">
-			function plasmasOFF() {
-				window.setTimeout("extronBox(well, mainOne, lgTV, stupid_sync);",250);
-				window.setTimeout("extronBox(well, mainOne, lgTV, power_off);",500);
+			function masterON() {
+				window.setTimeout("extronBox(well, mainThree, lgTV, stupid_sync);",250);
+				window.setTimeout("extronBox(well, mainThree, lgTV, power_on);",500);
+				window.setTimeout("extronBox(well, mainTwo, lgTV, stupid_sync);",1250);
+				window.setTimeout("extronBox(well, mainTwo, lgTV, power_on);",1500);
+				window.setTimeout("extronBox(well, mainOne, lgTV, stupid_sync);",2250);
+				window.setTimeout("extronBox(well, mainOne, lgTV, power_on);",2500);
+				window.setTimeout("extronBox(well, foldbackTV, lgTV, stupid_sync);",3250);
+				window.setTimeout("extronBox(well, foldbackTV, lgTV, power_on);",3500);
+				window.setTimeout("extronBox(well, mainCenter, panasonicPJLink, power_on);",1000);
+			}
+			function masterOFF() {
+				window.setTimeout("extronBox(well, mainThree, lgTV, stupid_sync);",250);
+				window.setTimeout("extronBox(well, mainThree, lgTV, power_off);",500);
 				window.setTimeout("extronBox(well, mainTwo, lgTV, stupid_sync);",1250);
 				window.setTimeout("extronBox(well, mainTwo, lgTV, power_off);",1500);
-				window.setTimeout("extronBox(well, mainThree, lgTV, stupid_sync);",2250);
-				window.setTimeout("extronBox(well, mainThree, lgTV, power_off);",2500);
+				window.setTimeout("extronBox(well, mainOne, lgTV, stupid_sync);",2250);
+				window.setTimeout("extronBox(well, mainOne, lgTV, power_off);",2500);
+				window.setTimeout("extronBox(well, foldbackTV, lgTV, stupid_sync);",3250);
+				window.setTimeout("extronBox(well, foldbackTV, lgTV, power_off);",3500);
+				window.setTimeout("extronBox(well, mainCenter, panasonicPJLink, power_off);",1000);
 			}
 			function plasmasON() {
 				window.setTimeout("extronBox(well, mainThree, lgTV, stupid_sync);",250);
@@ -29,6 +44,14 @@
 				window.setTimeout("extronBox(well, mainTwo, lgTV, power_on);",1500);
 				window.setTimeout("extronBox(well, mainOne, lgTV, stupid_sync);",2250);
 				window.setTimeout("extronBox(well, mainOne, lgTV, power_on);",2500);
+			}
+			function plasmasOFF() {
+				window.setTimeout("extronBox(well, mainOne, lgTV, stupid_sync);",250);
+				window.setTimeout("extronBox(well, mainOne, lgTV, power_off);",500);
+				window.setTimeout("extronBox(well, mainTwo, lgTV, stupid_sync);",1250);
+				window.setTimeout("extronBox(well, mainTwo, lgTV, power_off);",1500);
+				window.setTimeout("extronBox(well, mainThree, lgTV, stupid_sync);",2250);
+				window.setTimeout("extronBox(well, mainThree, lgTV, power_off);",2500);
 			}
 		</script>
 
@@ -44,15 +67,32 @@
 		<table class="table-buttons full-width table-align-center">
 			<tr class="table-buttons">
 				<td colspan="2">
+					<span class="arial-big light-gray">Master control:</span>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="masterON();">Master ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="masterOFF();">Master OFF</a>
+				</td>
+			</tr>
+            <tr class="table-buttons">
+                <td colspan="2">
+                    <br>
+					<br>
+					<br>
+					<br>
 					<span class="arial-big light-gray">Power controls:</span>
 				</td>
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="extronBox(well, mainCenter, sanyoPLC, power_on);">Projector ON</a>
+					<a class="common simple green width-80" onclick="extronBox(well, mainCenter, panasonicPJLink, power_on);">Projector ON</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="extronBox(well, mainCenter, sanyoPLC, power_off);">Projector OFF</a>
+					<a class="common simple red width-80" onclick="extronBox(well, mainCenter, panasonicPJLink, power_off);">Projector OFF</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
@@ -86,18 +126,18 @@
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="extronBox(well, mainCenter, sanyoPLC, freeze_off);">Projector Freeze OFF</a>
+					<a class="common simple green width-80" onclick="extronBox(well, mainCenter, panasonicPJLink, freeze_off);">Projector Freeze OFF</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="extronBox(well, mainCenter, sanyoPLC, freeze_on);">Projector Freeze ON</a>
+					<a class="common simple red width-80" onclick="extronBox(well, mainCenter, panasonicPJLink, freeze_on);">Projector Freeze ON</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="extronBox(well, mainCenter, sanyoPLC, blank_off);">Projector Blank OFF</a>
+					<a class="common simple green width-80" onclick="extronBox(well, mainCenter, panasonicPJLink, blank_off);">Projector Blank OFF</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="extronBox(well, mainCenter, sanyoPLC, blank_on);">Projector Blank ON</a>
+					<a class="common simple red width-80" onclick="extronBox(well, mainCenter, panasonicPJLink, blank_on);">Projector Blank ON</a>
 				</td>
 			</tr>
 			<tr>

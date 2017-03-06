@@ -7,6 +7,22 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">
 		<script type="text/javascript" src="javascript/common_extron-stuff.js"></script>
 		<script type="text/javascript" src="javascript/projector-vars_wdm.js"></script>
+		<script type="text/javascript">
+			function all_on() {
+				setTimeout("extronBox(bridge, mainLeft, panasonicPJLink, power_on);", 1000);
+				setTimeout("extronBox(bridge, mainRight, panasonicPJLink, power_on);", 2000);
+				setTimeout("extronBox(bridge, mainCenter, sanyoPLC, power_on);", 3000);
+				setTimeout("extronBox(bridge, foldbackCenter, sanyoPLC, power_on);", 4000);
+			}
+			function all_off() {
+				setTimeout("extronBox(bridge, mainLeft, panasonicPJLink, power_off);", 1000);
+				setTimeout("extronBox(bridge, mainRight, panasonicPJLink, power_off);", 2000);
+				setTimeout("extronBox(bridge, mainCenter, sanyoPLC, power_off);", 3000);
+				setTimeout("extronBox(bridge, foldbackCenter, sanyoPLC, power_off);", 4000);
+			}
+		</script>
+
+
 		<!--
 			Reminder:
 			extronBox(address, port, deviceType, action);
@@ -30,6 +46,14 @@
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="all_on();"><br><br><br>Projectors ON<br><br><br><br></a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="all_off();"><br><br><br>Projectors OFF<br><br><br><br></a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
 					<a class="common simple green width-80" onclick="extronBox(bridge, mainLeft, panasonicPJLink, power_on);">House Left ON</a>
 				</td>
 				<td class="table-buttons">
@@ -38,10 +62,10 @@
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="extronBox(bridge, mainLeft, panasonicPJLink, power_on);">House Right ON</a>
+					<a class="common simple green width-80" onclick="extronBox(bridge, mainRight, panasonicPJLink, power_on);">House Right ON</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="extronBox(bridge, mainLeft, panasonicPJLink, power_off);">House Right OFF</a>
+					<a class="common simple red width-80" onclick="extronBox(bridge, mainRight, panasonicPJLink, power_off);">House Right OFF</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">

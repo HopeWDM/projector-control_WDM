@@ -5,15 +5,23 @@
 		<meta charset="utf-8">
 		
 		<title>
-			Plasma control
+			Plasma/LCD screen control
 		</title>
 		
 		
-		<link rel="stylesheet" type="text/css" href="common_styles-file.css">		
+		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">		
 		
 		<script src="javascript/common_waci-stuff.js"></script>
-		<script src="javascript/projector-vars_wdm-waci.js"></script>
+		<script src="javascript/projector-vars_waci.js"></script>
 		<script src="javascript/waci-group-functions.js"></script>
+		<script type="text/javascript">
+			function httpGet (theUrl) {
+				var xmlHttp = null;
+    				xmlHttp = new XMLHttpRequest();
+    				xmlHttp.open( "GET", theUrl, true );
+    				xmlHttp.send();
+    			}
+		</script>
 
 	</head>
 	
@@ -23,7 +31,9 @@
 		<div>
 			<a class="common tiny" onclick="goBack();">Back</a>
 			<br><br>
-			<img src="remote/graphics/productionlogo_s.png" alt="Production Logo">
+			<img src="graphics/White_HopeProduction.png" alt="Hope Production Logo" height="150" width="225">
+		</div>
+		<div>
 			<table class="table-buttons full-width">
 				<tr class="table-buttons">
 					<td colspan="2">
@@ -98,12 +108,12 @@
 						<a class="common simple green width-80" onclick="waciBox(wc, footballTV, nope, power_on);">FB display ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, footballTV, nope, power_on);">FB display OFF<br></a>
+						<a class="common simple red width-80" onclick="waciBox(wc, footballTV, nope, power_off);">FB display OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="">FB input A<br></a>
+						<a class="common simple blue width-80" onclick="plasmaFBinputA();">FB input A<br></a>
 					</td>
 					<td class="table-buttons">
 						<a class="common simple blue width-80" onclick="plasmaFBinputB();">FB input B<br></a>
@@ -117,39 +127,66 @@
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="plasmaGSOn();">GS displays ON<br></a>
+						<a class="common simple green width-80" onclick="waciBox(wc, gsPlasmas, nope, power_on);">GS displays ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="plasmaGSOff();">GS displays OFF<br></a>
-					</td>
-				</tr>
-				<tr class="table-buttons">
-					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="plasmaENTRYOn();">Entry displays ON<br></a>
-					</td>
-					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="plasmaENTRYOff();">Entry displays OFF<br></a>
+						<a class="common simple red width-80" onclick="waciBox(wc, gsPlasmas, nope, power_off);">GS displays OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="plasmaCAFEOn();">Caf&#x000e9; display ON<br></a>
+						<a class="common simple green width-80" onclick="waciBox(wc, entryPlasmas, nope, power_on);">Entry displays ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="plasmaCAFEOff();">Caf&#x000e9; display OFF<br></a>
+						<a class="common simple red width-80" onclick="waciBox(wc, entryPlasmas, nope, power_off);">Entry displays OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="plasmaPRAYEROn();">Prayer rooms ON<br></a>
+						<a class="common simple green width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">Atrium cabinet HL ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="plasmaPRAYEROff();">Prayer rooms OFF<br></a>
+						<a class="common simple red width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">Atrium cabinet HL OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=xb%200%2090%0D');">Atrium cabinet HL input A<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=xb%200%2060%0D');">Atrium cabinet HL input B<br></a>
+					</td>
+				</tr><tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">Atrium cabinet HR ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">Atrium cabinet HR OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=xb%200%2090%0D');">Atrium cabinet HR input A<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=xb%200%2060%0D');">Atrium cabinet HR input B<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="waciBox(wc, prayerTVs, nope, power_on);">Prayer rooms ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="waciBox(wc, prayerTVs, nope, power_off);">Prayer rooms OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons" colspan="2">
+						<a class="common simple yellow width-90" href="bookstore-screen-controls.html">Bookstore display controls</a>
 					</td>
 				</tr>
 			</table>
 		</div>
-	
 	
 	
 	
