@@ -481,6 +481,9 @@ function waciBox (address, port, deviceType, action)
 			case 'zoom-out':
 				command = 'zoom_out';
 				break;
+			case 'auto':
+				command = 'auto';
+				break;
 		}
 		
 		
