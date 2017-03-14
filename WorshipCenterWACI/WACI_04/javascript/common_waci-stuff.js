@@ -253,7 +253,7 @@ var screen_down = 'screen-down';
 var screen_up = 'screen-up';
 var zoom_in = 'zoom-in';
 var zoom_out = 'zoom-out';
-
+var auto = 'auto';
 
 
 
