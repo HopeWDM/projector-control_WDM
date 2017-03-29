@@ -75,7 +75,7 @@ function populateVars (address) {
 			bridge = 'http://10.40.30.75/file.html';
 			break;
 		case 'chapel':
-			foldbackSide = '03';
+			foldbackSide = '04';
 			mainCenter = '02';
 			mainSide = '01';
 			chapel = 'http://10.40.30.70/file.html';
