@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"> 
+		<title>Worship Center controls</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">
+		<link rel="stylesheet" type="text/css" href="stylesheet/show-hide_waci.css">
+		<script type="text/javascript" src="javascript/common_pitron-stuff.js"></script>
+		<script type="text/javascript" src="javascript/pitron-vars_wdm.js"></script>
+		<script type="text/javascript" src="javascript/show-hide_waci.js"></script>
+		<!--
+			Reminder:
+			pitronBox(address, port, deviceType, action);
+			address = roomName;
+			port = projectorName;
+		// -->
+	</head>
+
+	<body class="bg-black" onload="showWC(mainTop);">
+		<div>
+			<a class="common tiny" onclick="goBack();">Back</a>
+			<br><br>
+			<img src="graphics/White_HopeProduction.png" alt="Hope Production Logo" height="150" width="225">
+		</div>
+		<br>
+		<div>
+			<a class="common tiny" onclick="showWC(mainTop);">[ main menu ]</a>
+		</div>
+		<br>
+		<div id="mainTop">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Worship Center projectors:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainLeft);">Main House Left</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainRight);">Main House Right</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterCenter);">Catwalk 01</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterLeft);">Catwalk 02</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterRight);">Catwalk 03</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackLeft);">Foldback House Left</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackRight);">Foldback House Right</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcMainLeft">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Main House Left:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainLeft_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainLeft_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainLeft_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainLeft_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcMainRight">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Main House Right:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainRight_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainRight_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainRight_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcMainRight_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcCenterCenter">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Catwalk 01:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterCenter_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterCenter_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterCenter_ks);">Keystone controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterCenter_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterCenter_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcCenterLeft">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Catwalk 02:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterLeft_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterLeft_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterLeft_ks);">Keystone controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterLeft_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterLeft_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcCenterRight">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Catwalk 03:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterRight_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterRight_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterRight_ks);">Keystone controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterRight_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcCenterRight_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcFoldbackLeft">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Foldback House Left:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackLeft_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackLeft_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackLeft_ks);">Keystone controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackLeft_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackLeft_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="wcFoldbackRight">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Foldback House Right:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackRight_tc);">Toggle controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackRight_mc);">Menu controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackRight_ks);">Keystone controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackRight_ls);">Lens shift controls</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showWC(wcFoldbackRight_fz);">Focus/zoom controls</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcMainLeft_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Main House Left</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcMainHL, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcMainHL, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcMainHL, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcMainHL, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcMainHL, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcMainHL, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcMainLeft_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">House Left projector</span>
+						<br><br><br><br><br>
+						<span class="arial-big light-gray">Menu controls:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(wcMainHL, ###, menu_on);">Menu ON</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(wcMainHL, ###, menu_off);">Menu OFF</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcMainLeft_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Main House Left</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHL, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcMainLeft_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Main House Left</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHL, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHL, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+<!-- End Focus //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHL, ###, zoom_in);">Zoom<br>In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHL, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcMainRight_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Main House Right</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcMainHR, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcMainHR, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcMainHR, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcMainHR, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcMainHR, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcMainHR, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcMainRight_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">House Right projector</span>
+						<br><br><br><br><br>
+						<span class="arial-big light-gray">Menu controls:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(wcMainHR, ###, menu_on);">Menu ON</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(wcMainHR, ###, menu_off);">Menu OFF</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcMainRight_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Main House Right</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcMainHR, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcMainRight_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcMainRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Main House Right</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHR, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHR, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHR, ###, zoom_in);">Zoom<br>In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcMainHR, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcCenterCenter_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterCenter);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Catwalk 01</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk01, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk01, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk01, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk01, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk01, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk01, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcCenterCenter_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterCenter);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 01 projector</span>
+						<br><br><br><br><br>
+						<span class="arial-big light-gray">Menu controls:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(wcCatwalk01, ###, menu_on);">Menu ON</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(wcCatwalk01, ###, menu_off);">Menu OFF</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+<!-- Start Keystone //-->
+		<div id="wcCenterCenter_ks">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterCenter);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 01</span>
+						<br>
+						<span class="arial-big light-gray">Keystone controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, keystone_left);"><img src="graphics/arrow-left.png" alt="Keystone Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, keystone_right);"><img src="graphics/arrow-right.png" alt="Keystone Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Keystone //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcCenterCenter_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterCenter);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 01</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Lens Shift</span>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk01, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcCenterCenter_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterCenter);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Catwalk 01</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk01, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk01, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+<!-- End Focus //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk01, ###, zoom_in);">Zoom<br>In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk01, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcCenterLeft_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Catwalk 02</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk02, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk02, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk02, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk02, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk02, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk02, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcCenterLeft_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-large light-gray">Catwalk 02</span>
+						<br>
+						<span class="arial-big light-gray">Menu controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk02, ###, menu_toggle);">Menu Toggle</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+<!-- Start Keystone //-->
+		<div id="wcCenterLeft_ks">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 02</span>
+						<br>
+						<span class="arial-big light-gray">Keystone controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, keystone_left);"><img src="graphics/arrow-left.png" alt="Keystone Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, keystone_right);"><img src="graphics/arrow-right.png" alt="Keystone Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Keystone //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcCenterLeft_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 02</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Lens Shift</span>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk02, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcCenterLeft_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Catwalk 02</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk02, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk02, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+<!-- End Focus //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk02, ###, zoom_in);">Zoom<br>In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk02, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcCenterRight_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Catwalk 03</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk03, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk03, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk03, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk03, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcCatwalk03, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcCatwalk03, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcCenterRight_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-large light-gray">Catwalk 03</span>
+						<br>
+						<span class="arial-big light-gray">Menu controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk03, ###, menu_toggle);">Menu Toggle</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+<!-- Start Keystone //-->
+		<div id="wcCenterRight_ks">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 03</span>
+						<br>
+						<span class="arial-big light-gray">Keystone controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, keystone_left);"><img src="graphics/arrow-left.png" alt="Keystone Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, keystone_right);"><img src="graphics/arrow-right.png" alt="Keystone Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Keystone //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcCenterRight_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Catwalk 03</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, lens_shift_left);"><img src="graphics/arrow-left.png" alt="Lens Shift Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">Lens Shift</span>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, lens_shift_right);"><img src="graphics/arrow-right.png" alt="Lens Shift Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcCatwalk03, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcCenterRight_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcCenterRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Catwalk 03</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk03, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk03, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+<!-- End Focus //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk03, ###, zoom_in);">Zoom<br>In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcCatwalk03, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcFoldbackLeft_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Foldback House Left</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcFoldbackHL, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcFoldbackHL, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcFoldbackHL, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcFoldbackHL, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcFoldbackHL, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcFoldbackHL, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcFoldbackLeft_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Foldback House Left projector</span>
+						<br><br><br><br><br>
+						<span class="arial-big light-gray">Menu controls:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(wcFoldbackHL, ###, menu_on);">Menu ON</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(wcFoldbackHL, ###, menu_off);">Menu OFF</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+<!-- Start Keystone //-->
+		<div id="wcFoldbackLeft_ks">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td>
+						<span class="arial-large light-gray">Foldback House Left</span>
+						<br>
+						<span class="arial-big light-gray">Keystone controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Keystone //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcFoldbackLeft_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td>
+						<span class="arial-large light-gray">Foldback House Left</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHL, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcFoldbackLeft_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackLeft);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Foldback House Left</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHL, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHL, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+<!-- End Focus //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHL, ###, zoom_in);">Zoom<br>In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHL, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Toggles //-->
+		<div id="wcFoldbackRight_tc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Foldback House Right</span>
+						<br>
+						<span class="arial-big light-gray">Toggle controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcFoldbackHR, ###, power_on);">Power on</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcFoldbackHR, ###, power_off);">Power off</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcFoldbackHR, ###, blank_off);">Blank off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcFoldbackHR, ###, blank_on);">Blank on</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green normal-width" onclick="pitronBox(wcFoldbackHR, ###, freeze_off);">Freeze off</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red normal-width" onclick="pitronBox(wcFoldbackHR, ###, freeze_on);">Freeze on</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Toggles //-->
+
+<!-- Start Menu //-->
+		<div id="wcFoldbackRight_mc">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<span class="arial-large light-gray">Foldback House Right projector</span>
+						<br><br><br><br><br>
+						<span class="arial-big light-gray">Menu controls:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(wcFoldbackHR, ###, menu_on);">Menu ON</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(wcFoldbackHR, ###, menu_off);">Menu OFF</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td colspan="3">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Menu //-->
+
+<!-- Start Keystone //-->
+		<div id="wcFoldbackRight_ks">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td>
+						<span class="arial-large light-gray">Foldback House Right</span>
+						<br>
+						<span class="arial-big light-gray">Keystone controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, keystone_up);"><img src="graphics/arrow-up.png" alt="Keystone Up" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, keystone_down);"><img src="graphics/arrow-down.png" alt="Keystone Down" width="64" height="64"></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Keystone //-->
+
+
+<!-- Start Lens Shift //-->
+		<div id="wcFoldbackRight_ls">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td>
+						<span class="arial-large light-gray">Foldback House Right</span>
+						<br>
+						<span class="arial-big light-gray">Lens Shift controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, lens_shift_up);"><img src="graphics/arrow-up.png" alt="Lens Shift Up" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(wcFoldbackHR, ###, lens_shift_down);"><img src="graphics/arrow-down.png" alt="Lens Shift Down" width="64" height="64"></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Lens Shift //-->
+<!-- Start Focus //-->
+		<div id="wcFoldbackRight_fz">
+			<span>
+				<a class="common tiny" onclick="showWC(wcFoldbackRight);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td colspan="2">
+						<span class="arial-large light-gray">Foldback House Right</span>
+						<br>
+						<span class="arial-big light-gray">Focus/Zoom controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHR, ###, focus_in);">Focus In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHR, ###, focus_out);">Focus Out</a>
+					</td>
+				</tr>
+<!-- End Focus //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+<!-- Start Zoom //-->
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHR, ###, zoom_in);">Zoom In</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple blue normal-width" onclick="pitronBox(wcFoldbackHR, ###, zoom_out);">Zoom Out</a>
+					</td>
+				</tr>
+<!-- End Zoom //-->
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+JUNK STUFF - 
+
+ONLY HERE FOR TESTING
+
+
+REMOVE THIS BLOCK WHEN DONE
+
+
+(AS WELL AS JUNK BELOW IT)
+
+
+!!!!!!!!!!!!!!
+
+
+//-->
+
+	</body>
+</html>
