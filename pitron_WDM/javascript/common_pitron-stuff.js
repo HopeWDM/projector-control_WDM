@@ -227,7 +227,7 @@ var deviceType;
 
 function pitronBox (address, deviceType, action)
 {
-
+	//this is where we input the individual IP address for each pitron
 	var address = 'http://10.40.30.81/cgi-bin/cgi.pl'
 	//var urlStart = address + '?cmd=W' + port + 'RS|';
 	var urlStart = address + '?cmd=' ;
