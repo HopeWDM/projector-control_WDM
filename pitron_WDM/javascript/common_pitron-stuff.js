@@ -82,6 +82,8 @@ var image1_recall = 'image1-recall';
 var image2_recall = 'image2-recall';
 var image3_recall = 'image3-recall';
 var image4_recall = 'image4-recall';
+var input_6 = 'input-6';
+var input_7 = 'input-7';
 var input_BNC = 'input-BNC';
 var input_DVI = 'input-DVI';
 var input_HDMI = 'input-HDMI';
@@ -523,6 +525,12 @@ function pitronBox (address, deviceType, action)
 			case 'power-on':
 				command = 'POWR1   ';
 				break;
+			case 'input-6':
+				command = 'AVD6    ';
+				break;
+			case 'input-7:
+				command - 'AVD7    ';
+				break:
 		}
 		
 		// Add in Sharp's funny little end byte:
