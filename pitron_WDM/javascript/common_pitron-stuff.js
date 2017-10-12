@@ -528,7 +528,7 @@ function pitronBox (address, deviceType, action)
 			case 'input-6':
 				command = 'AVD6    ';
 				break;
-			case 'input-7:
+			case 'input-7':
 				command - 'AVD7    ';
 				break:
 		}
