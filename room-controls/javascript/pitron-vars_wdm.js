@@ -48,16 +48,16 @@ function populateVars (address) {
 			atriumHR = 'http://10.40.30.86/cgi-bin/cgi.pl';
 			break;
 		case 'wcMainHL':
-			wcMainHL = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			wcMainHL = 'http://10.40.30.81/cgi-bin/cgi.pl';
 			break;
 		case 'wcMainHR':
-			wcMainHR = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			wcMainHR = 'http://10.40.30.82/cgi-bin/cgi.pl';
 			break;
 		case 'wcFoldbackHL':
-			wcFoldbackHL = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			wcFoldbackHL = 'http://10.40.30.83/cgi-bin/cgi.pl';
 			break;
 		case 'wcFoldbackHR':
-			wcFoldbackHR = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			wcFoldbackHR = 'http://10.40.30.84/cgi-bin/cgi.pl';
 			break;
 		case 'wcFootballTV':
 			wcFootballTV = 'http://10.40.30.###/cgi-bin/cgi.pl';
@@ -66,7 +66,7 @@ function populateVars (address) {
 			wcCatwalk01 = 'http://10.40.30.###/cgi-bin/cgi.pl';
 			break;
 		case 'wcCatwalk02':
-			wcCatwalk02 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			wcCatwalk02 = 'http://10.40.30.95/cgi-bin/cgi.pl';
 			break;
 		case 'wcCatwalk03':
 			wcCatwalk03 = 'http://10.40.30.###/cgi-bin/cgi.pl';
@@ -76,6 +76,9 @@ function populateVars (address) {
 			break;
 		case 'wcCatwalk05':
 			wcCatwalk05 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			break;
+		case 'wcPlasmas':
+			wcPlasmas = 'http://10.40.30.94/cgi-bin/cgi.pl';
 			break;
 		case 'wcPlasma01':
 			wcPlasma01 = 'http://10.40.30.###/cgi-bin/cgi.pl';
