@@ -132,6 +132,8 @@ function populateVars (address) {
 			id = '0A';
 			break;
 	}
-	misc = id;
-	return address;
+        var retVals = new Object();
+		retVals['address'] = address;
+		retVals['misc'] = id;
+	return retVals;
 }
