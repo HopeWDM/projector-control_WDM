@@ -129,7 +129,7 @@ function populateVars (address) {
 			break;
 		case 'wcMon10':
 			wcMon10 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = '10';
+			id = '0A';
 			break;
 	}
 }
