@@ -530,7 +530,7 @@ function pitronBox (address, deviceType, action, misc)
 	if (deviceType == 'lgTV')
 	{
 		misc = id;
-		var urlStart = urlStart + 'RS|';
+		;;var urlStart = urlStart + 'RS|';
 		
 		/*
 			This switch block takes the action you want
