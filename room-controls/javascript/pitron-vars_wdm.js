@@ -48,8 +48,7 @@ function populateVars (address) {
 		It knows, per room, what ports correspond to
 		what projector - so you don't have to remember.
 	*/
-	switch (address)
-	{
+	switch (address) {
 		case 'atriumHL':
 			mainCenter = '01';
 			atriumHL = 'http://10.40.30.85/cgi-bin/cgi.pl';
@@ -133,4 +132,5 @@ function populateVars (address) {
 			id = 10;
 			break;
 	}
+	misc = id;
 }
