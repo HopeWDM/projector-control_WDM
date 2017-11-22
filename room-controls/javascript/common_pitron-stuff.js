@@ -221,7 +221,7 @@ var action;
 var address;
 var deviceType;
 
-function extronBox (address, deviceType, action)
+function pitronBox (address, deviceType, action)
 {
 
 	populateVars (address);
