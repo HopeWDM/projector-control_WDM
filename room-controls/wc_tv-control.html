@@ -1,36 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<meta charset="utf-8">
-		
 		<title>
-			Plasma/LCD screen control
+			Mon/LCD screen control
 		</title>
-		
-		
 		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">		
-		
-		<script src="javascript/common_waci-stuff.js"></script>
-		<script src="javascript/projector-vars_waci.js"></script>
-		<script src="javascript/waci-group-functions.js"></script>
-		<script type="text/javascript">
-			function httpGet (theUrl) {
-				var xmlHttp = null;
-    				xmlHttp = new XMLHttpRequest();
-    				xmlHttp.open( "GET", theUrl, true );
-    				xmlHttp.send();
-    			}
-		</script>
-
+		<script src="javascript/common_pitron-stuff.js"></script>
+		<script src="javascript/pitron-vars_waci.js"></script>
 	</head>
 	
-	
 	<body class="bg-black">
-	
 		<div>
-			<a class="common tiny" onclick="goBack();">Back</a>
-			<br><br>
 			<img src="graphics/White_HopeProduction.png" alt="Hope Production Logo" height="150" width="225">
 		</div>
 		<div>
@@ -43,58 +24,90 @@
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="vcPlasmasON();">VC Plasmas ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(wcMons, lgTV, power_on);">VC Monitors ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="vcPlasmasOFF();">VC Plasmas OFF<br></a>
-					</td>
-				</tr>
-				<tr class="table-buttons">
-					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, vcPlasma01, nope, power_on);">VC Plasma 1 ON<br></a>
-					</td>
-					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, vcPlasma01, nope, power_off);">VC Plasma 1 OFF<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(wcMons, lgTV, power_off);">VC Monitors OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, vcPlasma02, nope, power_on);">VC Plasma 2 ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(wcMon01, lgTV power_on);">VC Monitor 01 ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, vcPlasma02, nope, power_off);">VC Plasma 2 OFF<br></a>
-					</td>
-				</tr>
-				<tr class="table-buttons">
-					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, vcPlasma03, nope, power_on);">VC Plasma 3 ON<br></a>
-					</td>
-					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, vcPlasma03, nope, power_off);">VC Plasma 3 OFF<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(wcMon01, lgTV, power_off);">VC Monitor 01 OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, vcPlasma04, nope, power_on);">VC Plasma 4 ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(wcMon02, lgTV, power_on);">VC Monitor 02 ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, vcPlasma04, nope, power_off);">VC Plasma 4 OFF<br></a>
-					</td>
-				</tr>
-				<tr class="table-buttons">
-					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, vcPlasma05, nope, power_on);">VC Plasma 5 ON<br></a>
-					</td>
-					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, vcPlasma05, nope, power_off);">VC Plasma 5 OFF<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(wcMon02, lgTV, power_off);">VC Monitor 02 OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, vcPlasma06, nope, power_on);">VC Plasma 6 ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(wcMon03, lgTV, power_on);">VC Monitor 03 ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, vcPlasma06, nope, power_off);">VC Plasma 6 OFF<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(wcMon03, lgTV, power_off);">VC Monitor 03 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon04, lgTV, power_on);">VC Monitor 04 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon04, lgTV, power_off);">VC Monitor 04 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon05, lgTV, power_on);">VC Monitor 05 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon05, lgTV, power_off);">VC Monitor 05 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon06, lgTV, power_on);">VC Monitor 06 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon06, lgTV, power_off);">VC Monitor 06 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon07, lgTV, power_on);">VC Monitor 07 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon07, lgTV, power_off);">VC Monitor 07 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon08, lgTV, power_on);">VC Monitor 08 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon08, lgTV, power_off);">VC Monitor 08 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon09, lgTV, power_on);">VC Monitor 09 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon09, lgTV, power_off);">VC Monitor 09 OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(wcMon10, lgTV, power_on);">VC Monitor 10 ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(wcMon10, lgTV, power_off);">VC Monitor 10 OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
@@ -105,84 +118,84 @@
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, footballTV, nope, power_on);">FB display ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(wcFootballTV, sharpTV, power_on);">FB display ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, footballTV, nope, power_off);">FB display OFF<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(wcFootballTV, sharpTV, power_off);">FB display OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="plasmaFBinputA();">FB input A<br></a>
+						<a class="common simple blue width-80" onclick="pitronBox(wcFootballTV, sharpTV, power_on);">FB input A<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="plasmaFBinputB();">FB input B<br></a>
+						<a class="common simple blue width-80" onclick="pitronBox(wcFootballTV, sharpTV, power_on);">FB input B<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td colspan="2">
 					<br><br><br>
-					<span class="arial-big light-gray">Other plasma displays:</span>
+					<span class="arial-big light-gray">Other Mon displays:</span>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, gsPlasmas, nope, power_on);">GS displays ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(###, power_on);">GS displays ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, gsPlasmas, nope, power_off);">GS displays OFF<br></a>
-					</td>
-				</tr>
-				<tr class="table-buttons">
-					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="waciBox(wc, gsPlasmas, nope, Auto);">GS displays Auto-Adjust<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(###, power_off);">GS displays OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, entryPlasmas, nope, power_on);">Entry displays ON<br></a>
-					</td>
-					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, entryPlasmas, nope, power_off);">Entry displays OFF<br></a>
+						<a class="common simple blue width-80" onclick="pitronBox(###);">GS displays Auto-Adjust<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">Atrium cabinet HL ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(###, power_on);">Entry displays ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">Atrium cabinet HL OFF<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(###, power_off);">Entry displays OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=xb%200%2090%0D');">Atrium cabinet HL input A<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(atriumHL, lgTV, power_on);">Atrium cabinet HL ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.85/cgi-bin/cgi.pl?cmd=xb%200%2060%0D');">Atrium cabinet HL input B<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(atriumHL, lgTV, power_off);">Atrium cabinet HL OFF<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple blue width-80" onclick="pitronBox(atriumHL, lgTV, input-HDMI);">Atrium cabinet HL input HDMI<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple blue width-80" onclick="pitronBox(atriumHL, lgTV, input-VGA);">Atrium cabinet HL input VGA<br></a>
 					</td>
 				</tr><tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">Atrium cabinet HR ON<br></a>
+						<a class="common simple green width-80" onclick="pitronBox(atriumHR, lgTV, power_off);">Atrium cabinet HR ON<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">Atrium cabinet HR OFF<br></a>
-					</td>
-				</tr>
-				<tr class="table-buttons">
-					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=xb%200%2090%0D');">Atrium cabinet HR input A<br></a>
-					</td>
-					<td class="table-buttons">
-						<a class="common simple blue width-80" onclick="httpGet('http://10.40.30.86/cgi-bin/cgi.pl?cmd=xb%200%2060%0D');">Atrium cabinet HR input B<br></a>
+						<a class="common simple red width-80" onclick="pitronBox(atriumHR, lgTV, power_off);">Atrium cabinet HR OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
 					<td class="table-buttons">
-						<a class="common simple green width-80" onclick="waciBox(wc, prayerTVs, nope, power_on);">Prayer rooms ON<br></a>
+						<a class="common simple blue width-80" onclick="pitronBox(atriumHR, lgTV, input-HDMI);">Atrium cabinet HR input HDMI<br></a>
 					</td>
 					<td class="table-buttons">
-						<a class="common simple red width-80" onclick="waciBox(wc, prayerTVs, nope, power_off);">Prayer rooms OFF<br></a>
+						<a class="common simple blue width-80" onclick="pitronBox(atriumHR, lgTV, input-VGA);">Atrium cabinet HR input VGA<br></a>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="pitronBox(###, power_on);">Prayer rooms ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="pitronBox(###, power_off);">Prayer rooms OFF<br></a>
 					</td>
 				</tr>
 				<tr class="table-buttons">
@@ -192,9 +205,5 @@
 				</tr>
 			</table>
 		</div>
-	
-	
-	
-
 	</body>
 </html>
