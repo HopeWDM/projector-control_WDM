@@ -220,14 +220,14 @@ The following devices are supported by deviceType:
 var action;
 var address;
 var deviceType;
-function pitronBox (address, deviceType, action, misc)
-{
-	address = populateVars (address);
-	//var urlStart = address + '?cmd=W' + port + 'RS|';
+var misc;
+function pitronBox (address, deviceType, action, misc) {
+	var retVals = populateVars (address);
+	address = retVals['address'];
+	misc = retVals['misc'];
+
 	var urlStart = address + '?cmd=';
 	var command;
-
-
 
 	if (deviceType == 'daLite')
 	{
