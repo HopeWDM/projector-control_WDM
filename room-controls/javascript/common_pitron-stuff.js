@@ -220,12 +220,9 @@ The following devices are supported by deviceType:
 var action;
 var address;
 var deviceType;
-var misc;
 function pitronBox (address, deviceType, action, misc)
 {
-	populateVars (address);
-
-
+	address = populateVars (address);
 	//var urlStart = address + '?cmd=W' + port + 'RS|';
 	var urlStart = address + '?cmd=';
 	var command;
@@ -260,9 +257,6 @@ function pitronBox (address, deviceType, action, misc)
 
 	if (deviceType == 'sanyoPLC')
 	{
-		
-		var urlStart = urlStart + 'RS|';
-		
 		/*
 			This switch block takes the action you want
 			to execute, and turns it into the
@@ -380,8 +374,6 @@ function pitronBox (address, deviceType, action, misc)
 	
 	if (deviceType == 'panasonicPJLink')
 	{
-		var urlStart = urlStart + 'RS|';
-
 		/*
 			This switch block takes the action you want
 			to execute, and turns it into the
@@ -505,9 +497,6 @@ function pitronBox (address, deviceType, action, misc)
 	
 	if (deviceType == 'sharpTV')
 	{
-		
-		var urlStart = urlStart + 'RS|';
-		
 		/*
 			This switch block takes the action you want
 			to execute, and turns it into the
@@ -529,9 +518,6 @@ function pitronBox (address, deviceType, action, misc)
 
 	if (deviceType == 'lgTV')
 	{
-		misc = id;
-		;;var urlStart = urlStart + 'RS|';
-		
 		/*
 			This switch block takes the action you want
 			to execute, and turns it into the
