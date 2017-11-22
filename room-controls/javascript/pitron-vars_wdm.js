@@ -3,6 +3,7 @@
 // so that they equal themselves. (This is needed for a
 // switch/case block later on.)
 
+var id;
 var atriumHL = 'atriumHL';
 var atriumHR = 'atriumHR';
 var wcMainHL = 'wcMainHL';
