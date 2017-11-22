@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>
+			Projector control
+		</title>
+		
+		
+		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">		
+		
+		<script src="javascript/pitron-vars_wdm.js"></script>
+
+	</head>
+
+
+	<body class="bg-black">
+		<div>
+			<img src="graphics/White_HopeProduction.png" alt="Hope Production Logo" height="150" width="225">
+		</div>
+		<table class="table-buttons full-width">
+				<tr class="table-buttons">
+					<td colspan="2">
+					<br>
+					<span class="arial-big light-gray">Projector power controls:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons">
+					<td class="table-buttons">
+						<a class="common simple green width-80" onclick="projectorsON();">Projectors ON<br></a>
+					</td>
+					<td class="table-buttons">
+						<a class="common simple red width-80" onclick="projectorsOFF();">Projectors OFF<br></a>
+					</td>
+				</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox(wcMainHL, panasonicPJLink, power_on);">Main House Left ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox(wcMainHL, panasonicPJLink, power_off);">Main House Left OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox(wcMainHR, panasonicPJLink, power_on);">Main Right ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox(wcMainHR, panasonicPJLink, power_off);">Main Right OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox(wcFoldbackHL, sanyoPLC, power_on);">Foldback House Left ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox(wcFoldbackHL, sanyoPLC, power_off);">Foldback House Left OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox(wcFoldbackHR, sanyoPLC, power_on);">Foldback House Right ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox(wcFoldbackHR, sanyoPLC, power_off);">Foldback House Right OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox(wcCatwalk02, sanyoPLC, power_on);">Catwalk 02 ON (Ctr-Ctr)</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox(wcCatwalk02, sanyoPLC, power_off);">Catwalk 02 OFF (Ctr-Ctr)</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">VC Monitors ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">VC Monitors OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple yellow width-80" href="http://prod-autoserv.hopewdm.org/wc_advanced.html">WC Advanced Controls</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple yellow width-80" href="http://prod-autoserv.hopewdm.org">Projector Status</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
