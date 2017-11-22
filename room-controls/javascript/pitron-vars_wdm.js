@@ -89,48 +89,47 @@ function populateVars (address) {
 			break;
 		case 'wcMons':
 			wcMons = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 00;
+			id = '00';
 			break;
 		case 'wcMon01':
 			wcMon01 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 01;
+			id = '01';
 			break;
 		case 'wcMon02':
 			wcMon02 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 02;
+			id = '02';
 			break;
 		case 'wcMon03':
 			wcMon03 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 03;
+			id = '03';
 			break;
 		case 'wcMon04':
 			wcMon04 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 04;
+			id = '04';
 			break;
 		case 'wcMon05':
 			wcMon05 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 05;
+			id = '05';
 			break;
 		case 'wcMon06':
 			wcMon06 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 06;
+			id = '06';
 			break;
 		case 'wcMon07':
 			wcMon07 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 07;
+			id = '07';
 			break;
 		case 'wcMon08':
 			wcMon08 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 08;
+			id = '08';
 			break;
 		case 'wcMon09':
 			wcMon09 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 09;
+			id = '09';
 			break;
 		case 'wcMon10':
 			wcMon10 = 'http://10.40.30.94/cgi-bin/cgi.pl';
-			id = 10;
+			id = '10';
 			break;
 	}
-	misc = id;
 }
