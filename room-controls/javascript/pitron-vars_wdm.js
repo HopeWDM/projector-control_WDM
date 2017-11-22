@@ -15,12 +15,23 @@ var wcCatwalk02 = 'wcCatwalk02';
 var wcCatwalk03 = 'wcCatwalk03';
 var wcCatwalk04 = 'wcCatwalk04';
 var wcCatwalk05 = 'wcCatwalk05';
-var wcPlasma01 = 'wcPlasma01';
-var wcPlasma02 = 'wcPlasma02';
-var wcPlasma03 = 'wcPlasma03';
-var wcPlasma04 = 'wcPlasma04';
-var wcPlasma05 = 'wcPlasma05';
-var wcPlasma06 = 'wcPlasma06';
+var wcMons = 'wcMons';
+var wcMon01 = 'wcMon01';
+var wcMon02 = 'wcMon02';
+var wcMon03 = 'wcMon03';
+var wcMon04 = 'wcMon04';
+var wcMon05 = 'wcMon05';
+var wcMon06 = 'wcMon06';
+var wcMon07 = 'wcMon07';
+var wcMon08 = 'wcMon08';
+var wcMon09 = 'wcMon09';
+var wcMon10 = 'wcMon10';
+var wcMon11 = 'wcMon11';
+var wcMon12 = 'wcMon12';
+var wcMon13 = 'wcMon13';
+var wcMon14 = 'wcMon14';
+var wcMon15 = 'wcMon15';
+var wcMon16 = 'wcMon16';
 
 
 // these functions have code pulled from the
@@ -77,26 +88,49 @@ function populateVars (address) {
 		case 'wcCatwalk05':
 			wcCatwalk05 = 'http://10.40.30.###/cgi-bin/cgi.pl';
 			break;
-		case 'wcPlasmas':
-			wcPlasmas = 'http://10.40.30.94/cgi-bin/cgi.pl';
+		case 'wcMons':
+			wcMons = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 00;
 			break;
-		case 'wcPlasma01':
-			wcPlasma01 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+		case 'wcMon01':
+			wcMon01 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 01;
 			break;
-		case 'wcPlasma02':
-			wcPlasma02 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+		case 'wcMon02':
+			wcMon02 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 02;
 			break;
-		case 'wcPlasma03':
-			wcPlasma03 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+		case 'wcMon03':
+			wcMon03 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 03;
 			break;
-		case 'wcPlasma04':
-			wcPlasma04 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+		case 'wcMon04':
+			wcMon04 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 04;
 			break;
-		case 'wcPlasma05':
-			wcPlasma05 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+		case 'wcMon05':
+			wcMon05 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 05;
 			break;
-		case 'wcPlasma06':
-			wcPlasma06 = 'http://10.40.30.###/cgi-bin/cgi.pl';
+		case 'wcMon06':
+			wcMon06 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 06;
+			break;
+		case 'wcMon07':
+			wcMon07 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 07;
+			break;
+		case 'wcMon08':
+			wcMon08 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 08;
+			break;
+		case 'wcMon09':
+			wcMon09 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 09;
+			break;
+		case 'wcMon10':
+			wcMon10 = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			id = 10;
 			break;
 	}
 }
