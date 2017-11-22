@@ -220,11 +220,11 @@ The following devices are supported by deviceType:
 var action;
 var address;
 var deviceType;
-
-function pitronBox (address, deviceType, action)
+var misc;
+function pitronBox (address, deviceType, action, misc)
 {
-
 	populateVars (address);
+
 
 	//var urlStart = address + '?cmd=W' + port + 'RS|';
 	var urlStart = address + '?cmd=';
@@ -529,7 +529,7 @@ function pitronBox (address, deviceType, action)
 
 	if (deviceType == 'lgTV')
 	{
-		
+		misc = id;
 		var urlStart = urlStart + 'RS|';
 		
 		/*
@@ -540,37 +540,37 @@ function pitronBox (address, deviceType, action)
 		switch (action)
 		{
 			case 'input-HDMI': // technically HDMI 1
-				command = 'xb%200%2090';
+				command = 'xb%20'+misc+'%2090';
 				break;
 			case 'input-VGA':
-				command = 'xb%200%2060';
+				command = 'xb%20'+misc+'%2060';
 				break;
 			case 'menu-back':
-				command = 'mc%200%2028';
+				command = 'mc%20'+misc+'%2028';
 				break;
 			case 'menu-down':
-				command = 'mc%200%2041';
+				command = 'mc%20'+misc+'%2041';
 				break;
 			case 'menu-enter':
-				command = 'mc%200%2044';
+				command = 'mc%20'+misc+'%2044';
 				break;
 			case 'menu-left':
-				command = 'mc%200%2007';
+				command = 'mc%20'+misc+'%2007';
 				break;
 			case 'menu-right':
-				command = 'mc%200%2006';
+				command = 'mc%20'+misc+'%2006';
 				break;
 			case 'menu-toggle':
-				command = 'mc%200%2043';
+				command = 'mc%20'+misc+'%2043';
 				break;
 			case 'menu-up':
-				command = 'mc%200%2040';
+				command = 'mc%20'+misc+'%2040';
 				break;
 			case 'power-off':
-				command = 'ka%20%30%20%30';
+				command = 'ka%20'+misc+'%20%30';
 				break;
 			case 'power-on':
-				command = 'ka%20%30%20%31';
+				command = 'ka%20'+misc+'%20%31';
 				break;
 			case 'stupid-sync':
 				command = '';
