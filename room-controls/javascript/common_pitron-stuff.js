@@ -510,6 +510,39 @@ function pitronBox (address, deviceType, action, misc) {
 			case 'power-on':
 				command = 'POWR1   ';
 				break;
+			case 'input-HDMI1';
+				command = 'IAVD1   ';
+				break;
+			case 'input-HDMI2';
+				command = 'IAVD2   ';
+				break;
+			case 'input-HDMI3';
+				command = 'IAVD3   ';
+				break;
+			case 'input-HDMI4';
+				command = 'IAVD4   ';
+				break;
+			case 'menu-back':
+				command = 'RCKY45  ';
+				break;
+			case 'menu-down':
+				command = 'RCKY42  ';
+				break;
+			case 'menu-enter':
+				command = 'RCKY40  ';
+				break;
+			case 'menu-left':
+				command = 'RCKY43  ';
+				break;
+			case 'menu-right':
+				command = 'RCKY44  ';
+				break;
+			case 'menu-toggle':
+				command = 'RCKY38  ';
+				break;
+			case 'menu-up':
+				command = 'RCKY41  ';
+				break;
 		}
 		
 		// Add in Sharp's funny little end byte:
