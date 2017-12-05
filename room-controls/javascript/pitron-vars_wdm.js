@@ -52,72 +52,72 @@ function populateVars (address) {
 	switch (address) {
 		case 'atriumHL':
 			mainCenter = '01';
-			address = 'http://10.40.30.85/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.85/cgi-bin/raw.pl';
 			break;
 		case 'atriumHR':
 			mainCenter = '01';
-			address = 'http://10.40.30.86/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.86/cgi-bin/raw.pl';
 			break;
 		case 'wcMainHL':
-			address = 'http://10.40.30.81/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.81/cgi-bin/raw.pl';
 			break;
 		case 'wcMainHR':
-			address = 'http://10.40.30.82/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.82/cgi-bin/raw.pl';
 			break;
 		case 'wcFoldbackHL':
-			address = 'http://10.40.30.83/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.83/cgi-bin/raw.pl';
 			break;
 		case 'wcFoldbackHR':
-			address = 'http://10.40.30.84/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.84/cgi-bin/raw.pl';
 			break;
 		case 'wcFootballTV':
-			address = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.96/cgi-bin/raw.pl';
 			break;
 		case 'wcCatwalk01':
-			address = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.###/cgi-bin/raw.pl';
 			break;
 		case 'wcCatwalk02':
-			address = 'http://10.40.30.95/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.95/cgi-bin/raw.pl';
 			break;
 		case 'wcCatwalk03':
-			address = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.###/cgi-bin/raw.pl';
 			break;
 		case 'wcCatwalk04':
-			address = 'http://10.40.30.###/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.###/cgi-bin/raw.pl';
 			break;
 		case 'wcCatwalk05':
 			address = 'http://10.40.30.###/cgi-bin/cgi.pl';
 			break;
 		case 'wcMons':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '00';
 			break;
 		case 'wcMon01':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '01';
 			break;
 		case 'wcMon02':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '02';
 			break;
 		case 'wcMon03':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '03';
 			break;
 		case 'wcMon04':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '04';
 			break;
 		case 'wcMon05':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '05';
 			break;
 		case 'wcMon06':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '06';
 			break;
 		case 'wcMon07':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '07';
 			break;
 		case 'wcMon08':
@@ -125,11 +125,11 @@ function populateVars (address) {
 			id = '08';
 			break;
 		case 'wcMon09':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '09';
 			break;
 		case 'wcMon10':
-			address = 'http://10.40.30.94/cgi-bin/cgi.pl';
+			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '0A';
 			break;
 	}
