@@ -510,16 +510,16 @@ function pitronBox (address, deviceType, action, misc) {
 			case 'power-on':
 				command = 'POWR1   ';
 				break;
-			case 'input-HDMI1';
+			case 'input-HDMI1':
 				command = 'IAVD1   ';
 				break;
-			case 'input-HDMI2';
+			case 'input-HDMI2':
 				command = 'IAVD2   ';
 				break;
-			case 'input-HDMI3';
+			case 'input-HDMI3':
 				command = 'IAVD3   ';
 				break;
-			case 'input-HDMI4';
+			case 'input-HDMI4':
 				command = 'IAVD4   ';
 				break;
 			case 'menu-back':
