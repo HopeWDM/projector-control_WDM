@@ -9,9 +9,8 @@
 		
 		
 		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">		
-		<script src="javascript/common_pitron-stuff.js"></script>
-		<script src="javascript/pitron-vars_wdm.js"></script>
-
+		<script type="text/javascript" src="javascript/common_pitron-stuff.js"></script>
+		<script type="text/javascript" src="javascript/pitron-vars_wdm.js"></script>
 	</head>
 
 
@@ -26,6 +25,7 @@
 					<span class="arial-big light-gray">Projector power controls:</span>
 					</td>
 				</tr>
+<!--
 				<tr class="table-buttons">
 					<td class="table-buttons">
 						<a class="common simple green width-80" onclick="projectorsON();">Projectors ON<br></a>
@@ -34,6 +34,7 @@
 						<a class="common simple red width-80" onclick="projectorsOFF();">Projectors OFF<br></a>
 					</td>
 				</tr>
+-->
 			<tr class="table-buttons">
 				<td class="table-buttons">
 					<a class="common simple green width-80" onclick="pitronBox(wcMainHL, panasonicPJLink, power_on);">Main House Left ON</a>
@@ -76,10 +77,34 @@
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">VC Monitors ON</a>
+					<a class="common simple green width-80" onclick="pitronBox('http://10.40.30.109/cgi-bin/raw.pl?cmd=ka%200%201%0D');">VC Front Row Monitors ON</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">VC Monitors OFF</a>
+					<a class="common simple red width-80" onclick="pitronBox('http://10.40.30.109/cgi-bin/raw.pl?cmd=ka%200%200%0D');">VC Front Row Monitors OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">VC Back Row Monitors ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">VC Back Row Monitors OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple green width-80" onclick="pitronBox(wcFootballTV, sharpTV, power_on);">Football TV ON</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple red width-80" onclick="pitronBox(wcFootballTV, sharpTV, power_off);">Football TV OFF</a>
+				</td>
+			</tr>
+			<tr class="table-buttons">
+				<td class="table-buttons">
+					<a class="common simple blue width-80" onclick="pitronBox(wcFootballTV, sharpTV, input_6);">Football TV Input 6</a>
+				</td>
+				<td class="table-buttons">
+					<a class="common simple blue width-80" onclick="pitronBox(wcFootballTV, sharpTV, input_8);">Football TV Input 8</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
