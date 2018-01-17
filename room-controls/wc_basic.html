@@ -77,18 +77,18 @@
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="pitronBox('http://10.40.30.109/cgi-bin/raw.pl?cmd=ka%200%201%0D');">VC Front Row Monitors ON</a>
+					<a class="common simple green width-80" onclick="pitronBox(wcFrontRowMons, lgTV, power_on);">VC Front Row Monitors ON</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="pitronBox('http://10.40.30.109/cgi-bin/raw.pl?cmd=ka%200%200%0D');">VC Front Row Monitors OFF</a>
+					<a class="common simple red width-80" onclick="pitronBox(wcFrontRowMons, lgTV, power_off);">VC Front Row Monitors OFF</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%201%0D');">VC Back Row Monitors ON</a>
+					<a class="common simple green width-80" onclick="httpGet('http://10.40.30.94/cgi-bin/power-on.sh');">VC Back Row Monitors ON</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="pitronBox('http://10.40.30.94/cgi-bin/cgi.pl?cmd=ka%200%200%0D');">VC Back Row Monitors OFF</a>
+					<a class="common simple red width-80" onclick="pitronBox(wcMons, lgTV, power_off);">VC Back Row Monitors OFF</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
