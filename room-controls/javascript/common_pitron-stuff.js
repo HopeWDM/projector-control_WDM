@@ -81,6 +81,7 @@ var image4_recall = 'image4-recall';
 var input_BNC = 'input-BNC';
 var input_DVI = 'input-DVI';
 var input_HDMI = 'input-HDMI';
+var input_HDMI2 = 'input-HDMI2';
 var input_SVid = 'input-SVid';
 var input_VGA = 'input-VGA';
 var input_1 = 'input-1';
@@ -587,8 +588,11 @@ function pitronBox (address, deviceType, action, misc) {
 		*/
 		switch (action)
 		{
-			case 'input-HDMI': // technically HDMI 1
+			case 'input-HDMI':
 				command = 'xb%20'+misc+'%2090';
+				break;
+			case 'input-HDMI2':
+				command = 'xb%20'+misc+'%2091';
 				break;
 			case 'input-VGA':
 				command = 'xb%20'+misc+'%2060';
