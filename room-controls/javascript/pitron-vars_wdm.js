@@ -16,6 +16,7 @@ var wcCatwalk02 = 'wcCatwalk02';
 var wcCatwalk03 = 'wcCatwalk03';
 var wcCatwalk04 = 'wcCatwalk04';
 var wcCatwalk05 = 'wcCatwalk05';
+var wcFrontRowMons = 'wcFrontRowMons';
 var wcMons = 'wcMons';
 var wcMon01 = 'wcMon01';
 var wcMon02 = 'wcMon02';
