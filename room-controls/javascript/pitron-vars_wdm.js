@@ -88,6 +88,10 @@ function populateVars (address) {
 		case 'wcCatwalk05':
 			address = 'http://10.40.30.###/cgi-bin/raw.pl';
 			break;
+		case 'wcFrontRowMons':
+			address = 'http://10.40.30.109/cgi-bin/raw.pl';
+			id = '00';
+			break;
 		case 'wcMons':
 			address = 'http://10.40.30.94/cgi-bin/raw.pl';
 			id = '00';
