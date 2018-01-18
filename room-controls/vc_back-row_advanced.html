@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"> 
+		<title>VC Monitor controls</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/common_styles-file.css">
+		<link rel="stylesheet" type="text/css" href="stylesheet/show-hide_pitronTV.css">
+		<script type="text/javascript" src="javascript/common_pitron-stuff.js"></script>
+		<script type="text/javascript" src="javascript/show-hide_mon.js"></script>
+		<!--
+			Reminder:
+			pitronBox(address, port, deviceType, action);
+			address = roomName;
+			port = projectorName;
+		// -->
+	</head>
+	
+	<body class="bg-black" onload="showDisplay(display);">
+		<div>
+			<a class="common tiny" onclick="goBack();">Back</a>
+			<br>
+			<br>
+			<img src="graphics/productionlogo_s.png" alt="Production Logo">
+		</div>
+		<br>
+		<div>
+		<!--	<a class="common tiny" onclick="showDisplay(mainTop);">[ main menu ]</a>
+		</div>
+		<br>
+		<div id="mainTop">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray" >WC Center Center projector:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display);">Center Center</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	-->
+		<div id="display">
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<span class="arial-big light-gray">VC Monitors:</span>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon1);">Mon 1</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon2);">Mon 2</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon3);">Mon 3</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon4);">Mon 4</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon5);">Mon 5</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon6);">Mon 6</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon7);">Mon 7</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon8);">Mon 8</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon9);">Mon 9</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple yellow normal-width" onclick="showDisplay(display_mon10);">Mon 10</a>
+					</td>
+				</tr>	
+			</table>
+		</div>
+	
+
+<!-- Start Mon 1 Menu //-->
+		<div id="display_mon1">
+			<span>
+				<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+			</span>
+			<table class="table-buttons-borderless full-width table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="3">
+						<span class="arial-large light-gray">Monitor 1</span>
+						<br>
+						<span class="arial-big light-gray">Menu controls:</span>
+						<br><br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon1, power_on);">Power ON</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon1, power_off);"> Power OFF </a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_toggle);">Menu Toggle</a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_back);">Menu Return</a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+                    <td class="table-buttons-borderless">
+                          <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon1, input_HDMI, power_on);">HDMI Input 1</a>
+                    </td>
+                    <td class="table-buttons-borderless">
+                        <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon1, input_HDMI2, power_off);">HDMI Input 2</a>
+                    </td>
+                </tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless" colspan="2">
+						<br>
+					</td>
+				</tr>
+			</table>
+			<table class="table-buttons-borderless table-align-center">
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+					</td>
+				</tr>
+				<tr class="table-buttons-borderless">
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+					<td class="table-buttons-borderless">
+						<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon1, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+					</td>
+					<td class="table-buttons-borderless">
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!-- End Mon 1 Menu //-->
+
+<!-- Start Mon 2 Menu //-->
+<div id="display_mon2">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 2</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon2, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon2, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon2, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon2, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon2, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 2 Menu //-->
+
+<!-- Start Mon 3 Menu //-->
+<div id="display_mon3">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 3</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon3, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon3, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon3, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon3, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon3, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 3 Menu //-->
+
+<!-- Start Mon 4 Menu //-->
+<div id="display_mon4">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 4</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon4, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon4, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon4, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon4, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon4, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 4 Menu //-->
+
+<!-- Start Mon 5 Menu //-->
+<div id="display_mon5">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 5</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon5, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon5, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon5, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon5, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon5, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 5 Menu //-->
+
+<!-- Start Mon 6 Menu //-->
+<div id="display_mon6">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 6</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon6, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon6, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon6, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon6, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon6, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 6 Menu //-->
+
+<!-- Start Mon 7 Menu //-->
+<div id="display_mon7">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 7</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon7, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon7, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon7, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon7, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon7, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 7 Menu //-->
+
+<!-- Start Mon 8 Menu //-->
+<div id="display_mon8">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 8</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon8, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon8, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon8, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon8, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon8, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 8 Menu //-->
+
+<!-- Start Mon 9 Menu //-->
+<div id="display_mon9">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 9</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon9, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon9, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon9, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon9, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon9, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- End Mon 9 Menu //-->
+
+<!-- Start Mon 10 Menu //-->
+<div id="display_mon10">
+	<span>
+		<a class="common tiny" onclick="showDisplay(display);">[ previous menu ]</a>
+	</span>
+	<table class="table-buttons-borderless full-width table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="3">
+				<span class="arial-large light-gray">Monitor 10</span>
+				<br>
+				<span class="arial-big light-gray">Menu controls:</span>
+				<br><br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon10, power_on);">Power ON</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon10, power_off);"> Power OFF </a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common simple green width-80" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_toggle);">Menu Toggle</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple red width-80" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_back);">Menu Return</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				  <a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon10, input_HDMI, power_on);">HDMI Input 1</a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common simple yellow width-80" onclick="pitronBox(PiTronAddress, lgTV, mon10, input_HDMI2, power_off);">HDMI Input 2</a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless" colspan="2">
+				<br>
+			</td>
+		</tr>
+	</table>
+	<table class="table-buttons-borderless table-align-center">
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_up);"><img src="graphics/arrow-up.png" alt="Menu Up" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_left);"><img src="graphics/arrow-left.png" alt="Menu Left" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_enter);"><img src="graphics/check-mark-green.png" alt="Menu Enter" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_right);"><img src="graphics/arrow-right.png" alt="Menu Right" width="64" height="64"></a>
+			</td>
+		</tr>
+		<tr class="table-buttons-borderless">
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+			<td class="table-buttons-borderless">
+				<a class="common-minimal normal-width" onclick="pitronBox(PiTronAddress, lgTV, mon10, menu_down);"><img src="graphics/arrow-down.png" alt="Menu Down" width="64" height="64"></a>
+			</td>
+			<td class="table-buttons-borderless">
+				<br>
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
