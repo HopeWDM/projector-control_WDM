@@ -60,6 +60,7 @@ Done!
 // setup other same-as-name variables
 
 var panasonicPJLink = 'panasonicPJLink';
+var panasonicTV = 'panasonicTV';
 var sanyoPLC = 'sanyoPLC';
 var lgTV = 'lgTV';
 var sharpTV = 'sharpTV';
@@ -511,6 +512,28 @@ function pitronBox (address, deviceType, action, misc) {
 		// Add in Panasonic's funny little
 		// start and end bytes:
 		command = '%02' + command + '%03';
+	} // end if(); for device
+	
+	if (deviceType == 'panasonicTV')
+	{
+		/*
+			This switch block takes the action you want
+			to execute, and turns it into the
+			the corresponding serial command.
+		*/
+		switch (action)
+		{
+			case 'power-off':
+				command = 'POF';
+				break;
+			case 'power-on':
+				command = 'PON';
+				break;
+		}
+		
+			// Add in Panasonic's funny little
+			// start and end bytes:
+			command = '%02' + command + '%03';
 	} // end if(); for device
 	
 	if (deviceType == 'sharpTV')
