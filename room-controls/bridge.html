@@ -11,13 +11,13 @@
 			function all_on() {
 				setTimeout("extronBox(bridge, mainLeft, panasonicPJLink, power_on);", 1000);
 				setTimeout("extronBox(bridge, mainRight, panasonicPJLink, power_on);", 2000);
-				setTimeout("extronBox(bridge, mainCenter, sanyoPLC, power_on);", 3000);
+				setTimeout("extronBox(bridge, mainCenter, panasonicPJLink, power_on);", 3000);
 				setTimeout("extronBox(bridge, foldbackCenter, sanyoPLC, power_on);", 4000);
 			}
 			function all_off() {
 				setTimeout("extronBox(bridge, mainLeft, panasonicPJLink, power_off);", 1000);
 				setTimeout("extronBox(bridge, mainRight, panasonicPJLink, power_off);", 2000);
-				setTimeout("extronBox(bridge, mainCenter, sanyoPLC, power_off);", 3000);
+				setTimeout("extronBox(bridge, mainCenter, panasonicPJLink, power_off);", 3000);
 				setTimeout("extronBox(bridge, foldbackCenter, sanyoPLC, power_off);", 4000);
 			}
 		</script>
@@ -143,18 +143,18 @@
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="extronBox(bridge, mainCenter, sanyoPLC, freeze_off);">Center Freeze OFF</a>
+					<a class="common simple green width-80" onclick="extronBox(bridge, mainCenter, panasonicPJLink, freeze_off);">Center Freeze OFF</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="extronBox(bridge, mainCenter, sanyoPLC, freeze_on);">Center Freeze ON</a>
+					<a class="common simple red width-80" onclick="extronBox(bridge, mainCenter, panasonicPJLink, freeze_on);">Center Freeze ON</a>
 				</td>
 			</tr>
 			<tr class="table-buttons">
 				<td class="table-buttons">
-					<a class="common simple green width-80" onclick="extronBox(bridge, mainCenter, sanyoPLC, blank_off);">Center Blank OFF</a>
+					<a class="common simple green width-80" onclick="extronBox(bridge, mainCenter, panasonicPJLink, blank_off);">Center Blank OFF</a>
 				</td>
 				<td class="table-buttons">
-					<a class="common simple red width-80" onclick="extronBox(bridge, mainCenter, sanyoPLC, blank_on);">Center Blank ON</a>
+					<a class="common simple red width-80" onclick="extronBox(bridge, mainCenter, panasonicPJLink, blank_on);">Center Blank ON</a>
 				</td>
 			</tr>
 			<tr>
