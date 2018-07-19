@@ -612,40 +612,40 @@ function pitronBox (address, deviceType, action, misc) {
 		switch (action)
 		{
 			case 'input-HDMI':
-				command = 'xb%20'+misc+'%2090';
+				command = 'xb%2000%2090';
 				break;
 			case 'input-HDMI2':
-				command = 'xb%20'+misc+'%2091';
+				command = 'xb%2000%2091';
 				break;
 			case 'input-VGA':
-				command = 'xb%20'+misc+'%2060';
+				command = 'xb%2000%2060';
 				break;
 			case 'menu-back':
-				command = 'mc%20'+misc+'%2028';
+				command = 'mc%2000%2028';
 				break;
 			case 'menu-down':
-				command = 'mc%20'+misc+'%2041';
+				command = 'mc%2000%2041';
 				break;
 			case 'menu-enter':
-				command = 'mc%20'+misc+'%2044';
+				command = 'mc%2000%2044';
 				break;
 			case 'menu-left':
-				command = 'mc%20'+misc+'%2007';
+				command = 'mc%2000%2007';
 				break;
 			case 'menu-right':
-				command = 'mc%20'+misc+'%2006';
+				command = 'mc%2000%2006';
 				break;
 			case 'menu-toggle':
-				command = 'mc%20'+misc+'%2043';
+				command = 'mc%2000%2043';
 				break;
 			case 'menu-up':
-				command = 'mc%20'+misc+'%2040';
+				command = 'mc%2000%2040';
 				break;
 			case 'power-off':
-				command = 'ka%20'+misc+'%20%30';
+				command = 'ka%2000%20%30';
 				break;
 			case 'power-on':
-				command = 'ka%20'+misc+'%20%31';
+				command = 'ka%2000%20%31';
 				break;
 			case 'stupid-sync':
 				command = '';
