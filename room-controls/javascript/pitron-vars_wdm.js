@@ -73,6 +73,7 @@ function populateVars (address) {
 			break;
 		case 'wcFootballTV':
 			address = 'http://10.40.30.96/cgi-bin/raw.pl';
+			id = '00';
 			break;
 		case 'wcCatwalk01':
 			address = 'http://10.40.30.###/cgi-bin/raw.pl';
